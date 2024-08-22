@@ -1,6 +1,7 @@
 package PageObject;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 
@@ -29,10 +30,11 @@ public class Login{
 		
 		driver.findElement(By.xpath("//input[@type='email']")).sendKeys("adi1500jan@gmail.com");
 		Thread.sleep(5000);
-		
-		Thread.sleep(5000);
+		driver.findElement(By.xpath("//button[@class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc LQeN7 BqKGqe Jskylb TrZEUc lw1w4b']")).sendKeys(Keys.ENTER);
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("Aditya@123");
-		driver.findElement(By.xpath("(//div[@class='VfPpkd-RLmnJb'])[2]")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//button[@class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc LQeN7 BqKGqe Jskylb TrZEUc lw1w4b']")).click();
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//tr[@id=':2a']")).click();
 		driver.findElement(By.xpath("(//span[@class='checkmark'])[1]")).click();

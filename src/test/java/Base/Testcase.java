@@ -7,7 +7,7 @@ import PageObject.Login;
 public class Testcase extends Setup{
 	
 	
-	@Test
+	@Test(enabled=false)
 	public void launch() throws InterruptedException {
 		driver.get(baseurl);
 		
@@ -17,6 +17,11 @@ public class Testcase extends Setup{
 		
 		Login lg = new Login(driver);
 		lg.loginvalidation();
+		
+	}
+	@Test
+	public void st() {
+		
 		
 	}
 	

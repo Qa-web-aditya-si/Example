@@ -6,7 +6,7 @@
       <class name="Base.Testcase">
         <methods>
           <include name="setupbase"/>
-          <include name="launch"/>
+          <include name="st"/>
         </methods>
       </class> <!-- Base.Testcase -->
     </classes>
