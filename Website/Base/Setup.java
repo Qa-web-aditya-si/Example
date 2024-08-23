@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 
 import Utilities.ReadDataFromConfig;
 
@@ -20,12 +21,15 @@ public class Setup {
 	
 	
 	@BeforeClass
-	public void setupbase() {
+	@Parameters({"browser"})
+	public void setupbase(String webbrowser) {
 		
-		//driver = new FirefoxDriver();
-		
-		StringBuffer a= sb.append("A");
-		System.out.println(a);
+		if(webbrowser.contains("chrome")) {
+			driver = new ChromeDriver();		
+		}
+		if(webbrowser.contains("firefox")) {
+			driver = new FirefoxDriver();		
+		}
 		
 		
 		
